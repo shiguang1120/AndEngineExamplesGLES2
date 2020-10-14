@@ -72,7 +72,8 @@ public class ExampleLauncher extends ExpandableListActivity {
 		this.findViewById(R.id.btn_get_involved).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(final View pView) {
-				ExampleLauncher.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/shiguang1120/AndEngine")));
+				// ExampleLauncher.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/shiguang1120/AndEngine")));
+				ExampleLauncher.this.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/shiguang1120/AndEngineExamplesGLES2")));
 			}
 		});
 
