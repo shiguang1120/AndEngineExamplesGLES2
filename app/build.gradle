@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "org.andengine.examples"
+        minSdkVersion 15
+        targetSdkVersion 30
+        versionCode 47
+        versionName "1.47"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    implementation files('libs/andengine-gles2.jar')
+    //    implementation files('libs/andengineaugmentedrealityextension-gles2.jar')
+    //    implementation files('libs/andenginelivewallpaperextension-gles2.jar')
+    //    implementation files('libs/andenginemodplayerextension-master.jar')
+    //    implementation files('libs/andenginemultiplayerextension-gles2.jar')
+    //    implementation files('libs/andenginemultitouchextension-master.jar')
+    //    implementation files('libs/andenginephysicsbox2dextension-gles2.jar')
+    //    implementation files('libs/andenginescriptingextension-gles2.jar')
+    //    implementation files('libs/andenginesvgtextureregionextension-gles2.jar')
+    //    implementation files('libs/andenginetexturepackerextension-gles2.jar')
+    //    implementation files('libs/andenginetmxtiledmapextension-gles2.jar')
+    implementation project(':andengine-gles2')
+    implementation project(':andengineaugmentedrealityextension-gles2')
+    implementation project(':andenginelivewallpaperextension-gles2')
+    implementation project(':andenginemodplayerextension-gles2')
+    implementation project(':andenginemultiplayerextension-gles2')
+    implementation project(':andenginemultitouchextension-gles2')
+    implementation project(':andenginephysicsbox2dextension-gles2')
+    implementation project(':andenginerobotiumextension-gles2')
+    implementation project(':andenginesvgtextureregionextension-gles2')
+    implementation project(':andenginetexturepackerextension-gles2')
+    implementation project(':andenginetmxtiledmapextension-gles2')
+}
